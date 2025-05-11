@@ -34,16 +34,37 @@ user-api-backend/
 
 ---
 
-## 📦 Requirements
+## 🛠 Setup
 
-- Python 3.8+
-- Django 3.x or 4.x
-- Django REST Framework
+1. Clone the repository:
 
-Install dependencies:
+```bash
+git clone https://github.com/Elbin12/user-api-backend.git
+cd user-api-backend/
+```
+2. Set up a virtual environment and activate it:
+```bash
+python -m venv env
+source env/bin/activate  # On Windows: env\Scripts\activate
+```
+3. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+4. Create .env file in `user-api-backend/` directory:
+```env
+SECRET_KEY=django-insecure-o3g_&2vrk66g%-xd%d1l%8hucap*%sjf0+!lofh6n6b*v=vrj-
+
+DB_NAME=postgres
+DB_USER=postgres
+DB_PASSWORD=user-backend!
+DB_HOST=user-backend-db.cq3sgkm4ui6j.us-east-1.rds.amazonaws.com
+DB_PORT=5432
+```
+5. Start the Django development server:
+```bash
+python manage.py runserver
 ```
 
 ---
@@ -128,20 +149,6 @@ Tests include:
 - Updating and deleting a user
 
 🔐 The test database is created automatically and destroyed after tests — **no changes are made to your development database**.
-
----
-
-## 📌 Example `.env` (if using)
-
-```env
-SECRET_KEY=django-insecure-o3g_&2vrk66g%-xd%d1l%8hucap*%sjf0+!lofh6n6b*v=vrj-
-
-DB_NAME=postgres
-DB_USER=postgres
-DB_PASSWORD=user-backend!
-DB_HOST=user-backend-db.cq3sgkm4ui6j.us-east-1.rds.amazonaws.com
-DB_PORT=5432
-```
 
 ---
 
